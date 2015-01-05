@@ -64,7 +64,7 @@ h5,h6 {
 }
 
 #sobre,#servicos,#produtos { /*min-height: 600px;*/
-	
+
 }
 
 #contato {
@@ -122,11 +122,12 @@ h5,h6 {
 }
 
 .carousel-caption { /*background-color: transparent;*/
-	background-color: rgba(200, 200, 200, 0.5);
+	background-color: rgba(0, 0, 0, 0.5);
 	position: static;
 	max-width: 500px;
 	padding: 10px;
 	margin-top: 10%;
+
 	border-top: 1px solid rgba(255, 255, 255, 0.3);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	border-right: 1px solid rgba(0, 0, 0, 0.1);
@@ -140,13 +141,13 @@ h5,h6 {
 	margin: 0;
 	line-height: 1.25;
 	color: #fff;
-	text-shadow: 0 1px 1px rgba(0, 0, 0, .9);
+	/*text-shadow: 0 1px 1px rgba(0, 0, 0, .9);*/
 }
 
 .carousel-caption .lead {
 	/*font-family: chaparral-pro-1, chaparral-pro-2, Georgia, serif;*/
 	/*font-family: 'Droid Sans', sans-serif;*/
-	
+
 }
 
 .carousel-caption h1 {
