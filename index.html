@@ -1,355 +1,80 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Autoprocess</title>
-<meta name="description" content="Autoprocess">
-<meta name="author" content="Autoprocess">
-<link rel="shortcut icon" href="favicon.ico">
-<!-- Le styles -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/bootstrap-responsive.css" rel="stylesheet">
-<link href="css/stylesheet.css" rel="stylesheet">
-<link href="css/site.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
-<script type="text/javascript" src="js/jquery.localscroll-1.2.7-min.js"></script>
-<script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
-<script type="text/javascript" src="js/jquery.timelinr-0.9.53.js"></script>
-<script type="text/javascript" src="js/twitter-bootstrap-hover-dropdown.js"></script>
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script type="text/javascript" src="js/ggraphs.js" charset="iso-8859-1"></script>
-<script type="text/javascript">
-$(document).ready(function(){
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-	$('span[data-toggle=tooltip]').tooltip();
+layout: default
+---
 
-	// popover demo
-    $("a[data-toggle=popover]")
-    	.popover({'trigger':'hover'})
-    	.click(function(e) {
-            e.preventDefault();
-        });
+<div class="area area-home">
+  <div class="row">
+    <div class="col text-center">
+      <h1>Acelere a transformação digital em seus projetos de software</h1>
+      <h3>Reduza o custo do software aumentando a qualidade e produtividade</h3>
+    </div>
+  </div>
+</div>
 
+<div class="area area-clientes">
+  <div class="row">
+    <div class="col text-center my-5">
+      <h1>Empresas inovadoras que confiam na <span class="setbox">Autoprocess</span></h1>
+      <h3>Compartilhe conosco o seu desafio em aplicação que nós resolvemos</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center my-5">
+      <a href="#" target="_blank"><img src="images/clientes/vw.jpg"></a>
+      <a href="#" target="_blank"><img src="images/clientes/renault.jpg"></a>
+      <a href="#" target="_blank"><img src="images/clientes/benteler.jpg"></a>
+      <a href="#" target="_blank"><img src="images/clientes/faurecia.jpg"></a>
+      <a href="#" target="_blank"><img src="images/clientes/jtekt.jpg"></a>
+      <a href="#" target="_blank"><img src="images/clientes/sas.jpg"></a>
+      <a href="#" target="_blank"><img src="images/clientes/thyssenkrupp.jpg"></a>
+    </div>
+  </div>
+</div>
 
-	function setTopMargin() {
-		var headerHeight = $('#header').height();
-		$('body #conteudo').css('margin-top',headerHeight);
-	}
-
-	function setHomeLnk() {
-		if($("body, html").scrollTop() > 100 || $("body").scrollTop() > 100) {
-			$("#lnkTopo").fadeIn();
-		} else {
-			$("#lnkTopo").fadeOut();
-		}
-	}
-
-
-	var headerHeightNeg = 0 - $('#header').height();
-	$('body').localScroll({offset: {left: 0, top: headerHeightNeg}});
-	$('.blockText').css('margin-top', 120);
-
-	setTopMargin();
-
-	$(window).resize(function() {
-		setTopMargin();
-		setHomeLnk();
-	});
-
-	$(window).scroll(function () {
-		setHomeLnk();
-	});
-
-	$('#conteudo').parallax("50%", 0.1);
-	$('#historia').parallax("50%", 0.1);
-	$('#sobre').parallax("50%", 0.1);
-	$('#servicos').parallax("50%", 0.1);
-	$('#clientes').parallax("50%", 0.1);
-	$('#empregos').parallax("50%", 0.1);
-	$('#contato').parallax("50%", 0.1);
-
-	$('#nav ul li').bind('click', function() {
-		//Faz a limpeza do objeto selecionado
-		$('#nav ul li').each(function () {
-			$(this).removeClass('active');
-		});
-
-		$(this).addClass('active');
-	});
-
-	$("#lnkTopo").bind('click', function () {
-		$('#nav ul li').each(function () {
-			$(this).removeClass('active');
-		});
-	});
-
-	$('.carousel').carousel({
-		  interval: 5000
-	});
-});
-</script>
-<style type="text/css">
-@media ( max-width : 767px) {
-	#header {
-		position: relative;
-	}
-	#conteudo {
-		margin-top: 0px !important;
-	}
-	.container,.navbar .container {
-		width: 100%;
-	}
-	ul.boxSoft,ul.boxFazemos,.box {
-		height: 100%;
-	}
-}
-</style>
-</head>
-<body>
-	<div id="lnkTopo" class="hidden-phone">
-		<a href="#conteudo"><img src="img/arrow-up.png"></a>
-	</div>
-	<section id="header" class="row-fluid">
-		<div class="navbar navbar-fixed-top">
-			<div class="container">
-				<div id="logo" onclick="window.location = 'index.html'">Autoprocess Automação de Processos</div>
-				<div id="nav" class="nav-collapse hidden-phone">
-					<ul class="nav nav-pills pull-right item_menu">
-						<li class="dropdown"><a class="dropdown-toggle" id="fazemos_lnk" role="button" data-hover="dropdown" data-target="#" href="#servicos">O que fazemos<b class="caret"></b></a>
-							<ul id="subnave" class="dropdown-menu" role="menu" aria-labelledby="fazemos_lnk">
-								<li><a href="#produtos">O que oferecemos</a></li>
-							</ul></li>
-						<li class="dropdown"><a class="dropdown-toggle" id="sobre_lnk" role="button" data-hover="dropdown" data-target="#" href="#historia">Quem somos<b class="caret"></b></a>
-							<ul id="subnave" class="dropdown-menu" role="menu" aria-labelledby="sobre_lnk">
-								<li><a href="#historia">Nossa História</a></li>
-								<li><a href="#acreditamos">No que acreditamos</a></li>
-								<!--<li><a href="#numeros">Nossos números</a></li>-->
-							</ul></li>
-						<li><a href="#empregos">Empregos</a></li>
-						<li><a href="#contato">Entre em contato</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
-	<div id="conteudo" class="row-fluid">
-		<!-- Carousel  ================================================== -->
-		<div id="myCarousel" class="carousel slide blocktext hidden-phone">
-			<div class="carousel-inner">
-				<div class="item active">
-					<img src="img/sj1.jpg" alt="">
-					<div class="container">
-						<div class="carousel-caption pull-right">
-							<h1>Automação Industrial</h1>
-							<p class="lead right">Temos inúmeros casos de sucesso em empresas referências da indústria automobilística</p>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<img src="img/sj2.jpg" alt="">
-					<div class="container">
-						<div class="carousel-caption">
-							<h1>Serviços</h1>
-							<p class="lead right">Oferecemos consultoria e soluções específicas em TI (tecnologia em informação) para a área de serviços</p>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<img src="img/sj5.jpg" alt="">
-					<div class="container">
-						<div class="carousel-caption pull-right">
-							<h1>Finanças</h1>
-							<p class="lead right">Desenvolvendo softwares para a indústria financeira desde 2002, a Autoprocess tornou-se especialista em soluções para este mercado</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a> <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-		</div>
-		<div id="servicos" class="container blocktext">
-			<h2>O que fazemos</h2>
-			<!--<h3>Onde atuamos</h3>-->
-			<ul class="boxFazemos">
-				<li class="column span4 boxMaior"><span class="span12" style="text-align: center"> <img src="img/icons/credit-cards-icon.png">
-				</span>
-					<h4 style="text-align: center">Finanças</h4>
-					<p class="text-center">Desenvolvendo softwares para a indústria financeira desde 2002, a Autoprocess tornou-se especialista em soluções para este mercado.</p></li>
-				<li class="column span4 boxMaior"><span class="span12" style="text-align: center"> <img src="img/icons/automation-icon-751.png">
-				</span>
-					<h4 style="text-align: center">Automação</h4>
-					<p class="text-center">A automação industrial foi nosso principal segmento durante anos. Desta forma acumulamos inúmeros casos de sucesso em empresas referências da indústria automobilística.</p></li>
-				<li class="column span4 boxMaior" style="border: none"><span class="span12" style="text-align: center"> <img src="img/icons/icon_large_tie.jpg">
-				</span>
-					<h4 style="text-align: center">Serviços</h4>
-					<p class="text-center">Oferecemos consultoria e soluções específicas em TI (tecnologia em informação) para a área de serviços.</p></li>
-			</ul>
-			<div class="hero-unit" style="padding: 5px 15px;">
-				<p>
-					Trabalhamos lado a lado com nossos clientes desde a <strong>definição de arquitetura do sistema</strong>. Fornecemos <strong>consultoria</strong> para <strong>redesenho de processos</strong>. Desenvolvemos <strong>softwares sob medida</strong>
-					para cada negócio. Executamos baterias de testes para garantir a <strong>qualidade</strong> do nosso trabalho. Acompanhamos o processo de <strong>implantação</strong>, oferecendo <strong>treinamentos, garantia</strong> e <strong><span
-						data-toggle="tooltip" title="" data-original-title="Mediante contrato específico." style="border-bottom: 1px dotted #333"
-					>suporte 24/7</span></strong>.
-				</p>
-			</div>
-		</div>
-		<div id="produtos" class="container blocktext">
-			<h3>O que oferecemos</h3>
-			<div class="row-fluid">
-				<h4>Softwares</h4>
-			</div>
-			<div class="row-fluid">
-				<ul class="boxSoft">
-					<li class="span4 text-center box">
-						<h5>Rastreabilidade</h5>
-						<p>Softwares configuráveis e altamente customizáveis que atendem às normas das empresas da área automobilística, seja no quesito qualidade ou instrução operacional de montagem.</p>
-					</li>
-					<li class="span4 text-center box"><h5>Poka-Yokes</h5>
-						<p>Softwares destinados a evitar a ocorrência de defeitos (controle/advertência) em processos de fabricação de produtos.</p></li>
-					<li class="span4 text-center box"><h5>Compras</h5>
-						<p>Softwares desenvolvidos para empresas que desejam aperfeiçoar o abastecimento de componentes de uma linha de produção (alinhado com o princípio “lean manufacturing”).</p></li>
-				</ul>
-			</div>
-			<div class="alert alert-success text-center">
-				<p>Nossos softwares estão preparados para trabalhar com um enorme conjunto de periféricos, como parafusadeiras, torqueadeiras, scanners, impressoras zebra, PinPad, etc.</p>
-			</div>
-			<div class="row-fluid">
-				<div class="span6">
-					<h4>Serviços</h4>
-					<p>
-						<span data-toggle="tooltip" title="" data-original-title="Mediante contrato específico." style="border-bottom: 1px dotted #333">Além do desenvolvimento de softwares, fornecemos os seguintes serviços:</span>
-					</p>
-					<ul class="nav nav-list">
-						<li><i class="icon-chevron-right"></i>Programação CLP</li>
-						<li><i class="icon-chevron-right"></i>Instalações elétricas</li>
-						<li><i class="icon-chevron-right"></i>Instalações de rede</li>
-					</ul>
-				</div>
-				<div class="span6">
-					<h4>Equipamentos</h4>
-					<p>Fornecemos e instalamos diversos equipamentos (próprios e de fornecedores certificados), tais como:</p>
-					<ul class="nav nav-list">
-						<li><i class="icon-chevron-right"></i>PCs Industriais</li>
-						<li><i class="icon-chevron-right"></i>Painéis elétricos</li>
-						<li><i class="icon-chevron-right"></i>Impressoras e Scanners</li>
-						<li><i class="icon-chevron-right"></i>Módulos de aquisição</li>
-						<li><i class="icon-chevron-right"></i>CLP</li>
-					</ul>
-				</div>
-			</div>
-			<hr>
-		</div>
-		<div id="historia" class="container blocktext">
-			<h2>Quem somos</h2>
-			<h3>Nossa história</h3>
-			<div class="visible-phone">
-				<ul class="nav nav-list">
-					<li id="2004"><i class="icon-time"></i><b>2004</b>
-						<p>Iniciamos nossas atividades na cidade de São José dos Pinhais/ PR, criando soluções e desenvolvendo serviços para a indústria automobilística.</p></li>
-					<li id="2006"><i class="icon-time"></i><b>2006</b>
-						<p>Começamos a expandir nossas atividades para o setor financeiro, desenvolvendo soluções para um grande banco na cidade de Curitiba.</p></li>
-					<li id="2011"><i class="icon-time"></i><b>2011</b>
-						<p>Transferimos nossas instalações para a cidade de Curitiba/ PR. No mesmo ano firmamos uma sólida parceria com uma empresa local chamada Setbox Sistemas, fortalecendo nossa equipe operacional para atuar em projetos de grande porte.</p></li>
-				</ul>
-			</div>
-			<div class="row-fluid">
-				<div id="timeline" class="hidden-phone">
-					<ul id="dates">
-						<li><a href="#">2004</a></li>
-						<li><a href="#">2006</a></li>
-						<li><a href="#">2011</a></li>
-					</ul>
-					<ul id="issues">
-						<li id="2004">
-							<p>Iniciamos nossas atividades na cidade de São José dos Pinhais/ PR, criando soluções e desenvolvendo serviços para a indústria automobilística.</p>
-						</li>
-						<li id="2006">
-							<p>Começamos a expandir nossas atividades para o setor financeiro, desenvolvendo soluções para um grande banco na cidade de Curitiba.</p>
-						</li>
-						<li id="2011">
-							<p>Transferimos nossas instalações para a cidade de Curitiba/ PR. No mesmo ano firmamos uma sólida parceria com uma empresa local chamada Setbox Sistemas, fortalecendo nossa equipe operacional para atuar em projetos de grande porte.</p>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div id="acreditamos" class="container blocktext">
-			<h3>No que acreditamos</h3>
-			<ul class="nav nav-list">
-				<li><i class="icon-check"></i>&nbsp;<b>Em confiança</b>
-					<p>Delegamos total autoridade e responsabilidade para que as pessoas exerçam adequadamente suas atribuições.</p></li>
-				<li><i class="icon-check"></i>&nbsp;<b>Em trabalho de qualidade</b>
-					<p>Buscamos padrões globais de excelência em todo e qualquer trabalho produzido pelo nosso time.</p></li>
-				<li><i class="icon-check"></i>&nbsp;<b>Em compartilhar o conhecimento</b>
-					<p>Estimulamos a difusão e transparência das informações e a padronização de processos e métodos, para acumular e compartilhar o conhecimento da empresa.</p></li>
-				<li><i class="icon-check"></i>&nbsp;<b>Em simplicidade</b>
-					<p>Fazemos as coisas de forma simples porque é necessário ser simples para ser ágil, e é necessário ser ágil para vencer.</p></li>
-				<li><i class="icon-check"></i>&nbsp;<b>Em ética</b>
-					<p>Pautamos nossas ações nos mais altos padrões éticos e profissionais, e o comportamento que não atende este critério deve ser excluído independente da magnitude da falta.</p></li>
-			</ul>
-		</div>
-
-		<div id="empregos" class="container blocktext">
-			<h2>Empregos</h2>
-			<div class="row-fluid">
-				<h3>Nosso ambiente de trabalho</h3>
-				<p>Realmente são as pessoas que fazem da Autoprocess o tipo de empresa que ela é. Esforçamo-nos para manter nossa cultura livre, onde todos são estimulados a trocar idéias e opiniões.</p>
-				<p>Contratamos pessoas que são inteligentes e determinadas, e preferimos a capacidade em vez da experiência. Delegamos a elas total autoridade e responsabilidade para que exerçam adequadamente suas atribuições.</p>
-				<p>Estimulamos o compartilhamento do conhecimento e fazemos as coisas de forma simples, porque é necessário ser simples para ser ágil e é necessário ser ágil para vencer.</p>
-			</div>
-			<div class="row-fluid">
-				<h3>Faça parte de nossa equipe</h3>
-				<p>Nossa equipe é formada por excelentes profissionais, mas o constante crescimento indica que é hora de buscarmos novas mentes brilhantes. Acompanhe no quadro abaixo as oportunidades abertas no momento.</p>
-				<p>
-					Se tiver interesse em alguma vaga, envie seu CV para <a class="link_vermelho" href="mailto:rh@autoprocess.com.br">rh@autoprocess.com.br</a>, indicando no título do email o código da oportunidade.
-				</p>
-				<h5>Oportunidades de emprego</h5>
-				<p>
-					<i class="icon-chevron-right"></i>&nbsp;Não temos oportunidades em aberto no momento.</p>
-				</p>
-			</div>
-			<hr>
-		</div>
-		<div id="contato" class="container blocktext">
-			<h2>Fale conosco</h2>
-			<div class="row-fluid">
-				<address>
-					Rua Marechal Floriano Peixoto, 7401, Sala 12<br>Boqueirão - CEP 81670-000<br>Curitiba - PR <br> <br> Telefone: +55 (41) 3095-6582<br> E-mail: <a href="mailto:contato@autoprocess.com.br">contato@autoprocess.com.br</a><br>
-				</address>
-				<figure class="map img-polaroid">
-					<div id="map-canvas"></div>
-					<br />
-					<small><a
-						href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=pt-BR&amp;geocode=&amp;q=Rua+Marechal+Floriano+Peixoto,+7401,+Sala+12,+Curitiba,+Pr&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=46.677964,93.076172&amp;ie=UTF8&amp;hq=&amp;hnear=Av.+Mal.+Floriano+Peixoto,+7401+-+Boqueir%C3%A3o,+Curitiba+-+Paran%C3%A1,+81650-000&amp;t=m&amp;ll=-25.48698,-49.241495&amp;spn=0.013559,0.024891&amp;z=15&amp;iwloc=A"
-						style="color: #d21108; text-align: left; text-size: 12px;"
-					>Exibir mapa ampliado</a></small>
-				</figure>
-			</div>
-		</div>
-	</div>
-	<div id="footer">
-		<div class="container">
-			<p>&copy; <?php echo date('Y')?> Autoprocess Automação de Processos</p>
-		</div>
-	</div>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
-
-<script type="text/javascript">
-
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-23134250-1']);
-_gaq.push(['_trackPageview']);
-
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-
-</script>
-
-</body>
-</html>
+<div class="area area-negocios">
+  <div class="row">
+    <div class="col text-center mb-5">
+      <h1>Áreas de negócios</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 mb-2 offset-md-1 col-md-2 area-negocios-wrapper">
+      <a href="consultoria.html">
+        <div class="area-negocios-item text-center">
+          Consultoria
+        </div>
+      </a>
+    </div>
+    <div class="col-12 mb-2 col-md-2 area-negocios-wrapper">
+      <a href="programacao.html">
+        <div class="area-negocios-item text-center">
+          Programação de softwares, supervisórios e CLP
+        </div>
+      </a>
+    </div>
+    <div class="col-12 mb-2 col-md-2 area-negocios-wrapper">
+      <a href="https://outdoohr.com" target="_blank">
+        <div class="area-negocios-item text-center">
+          Instalações elétricas, painéis elétricos e rede
+        </div>
+      </a>
+    </div>
+    <div class="col-12 mb-2 col-md-2 area-negocios-wrapper">
+      <a href="https://autoprocess.com.br" target="_blank">
+        <div class="area-negocios-item text-center">
+          Venda de equipamentos
+        </div>
+      </a>
+    </div>
+    <div class="col-12 mb-2 col-md-2 area-negocios-wrapper">
+      <a href="https://agroprocess.com.br" target="_blank">
+        <div class="area-negocios-item text-center">
+          Suporte técnico
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

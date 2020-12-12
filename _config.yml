@@ -1,0 +1,27 @@
+title: Autoprocess Automação de Processos
+author:
+  name: autoprocess
+  email: contato@autoprocess.com.br
+description: > # this means to ignore newlines until "show_excerpts:"
+  Há mais de 16 anos transformando pessoas e empresas através de tecnologia
+  Somos apaixonados pelo que construímos e por tudo aquilo que ainda iremos realizar
+  Construa um futuro digital. Conte com a Autoprocess.
+
+show_excerpts: false # set to true to show excerpts on the homepage
+
+# Minima date format
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+#header_pages:
+# - about.md
+
+# Build settings
+theme: minima
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
