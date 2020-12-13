@@ -43,6 +43,16 @@ a, a:hover {
     }
   }
 
+  &.card-produto {
+    .card-body {
+      min-height: 300px;
+
+      .icone-produto {
+        color: var(--featured-dark);
+      }
+    }
+  }
+
   &.card-programacao {
     .card-header {
       background-color: var(--featured-dark);

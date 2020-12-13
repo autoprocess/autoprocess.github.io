@@ -70,6 +70,31 @@
   }
 }
 
+.area-marcas {
+  background-color: var(--light);
+
+  .marcas {
+    img {
+      height: 80px;
+      padding: 20px;
+      filter: grayscale(50%);
+
+      &:hover {
+        filter: grayscale(0%);
+        transition: .8s;
+      }
+    }
+  }
+}
+
+.area-empregos {
+  background-color: var(--light);
+
+  a {
+    color: var(--featured-dark);
+  }
+}
+
 .area-clientes {
   a {
     img {
