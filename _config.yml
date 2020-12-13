@@ -3,9 +3,7 @@ author:
   name: autoprocess
   email: contato@autoprocess.com.br
 description: > # this means to ignore newlines until "show_excerpts:"
-  Há mais de 16 anos transformando pessoas e empresas através de tecnologia
-  Somos apaixonados pelo que construímos e por tudo aquilo que ainda iremos realizar
-  Construa um futuro digital. Conte com a Autoprocess.
+  A Autoprocess oferece produtos e soluções para aprimoramento da flexibilidade e qualidade das operações de montagem em empresas de manufatura, orientação do operador, bem como coleta e análise de dados.
 
 show_excerpts: false # set to true to show excerpts on the homepage
 

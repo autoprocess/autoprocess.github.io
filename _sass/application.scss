@@ -26,10 +26,14 @@ a, a:hover {
   padding: 0;
 }
 
-.setbox {
+.autoprocess {
   color: var(--featured);
   font-weight: bold;
   padding: 0px !important; 
+}
+
+.alert-secondary {
+  background-color: var(--light);
 }
 
 .card {
